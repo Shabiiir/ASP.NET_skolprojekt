@@ -1,0 +1,377 @@
+﻿body
+{
+    font-family: Gill Sans MT, 'Lucida Bright';
+    background-image: url("570-pink-silk-wallpaper-1600x1200-customity.jpg");
+    background-color:#ed147e;
+}
+
+#btnMessage {
+    position:absolute;
+    top: 52px;
+    left: -74px;
+}
+
+#MessageContent {
+    position:absolute;
+}
+
+
+#container 
+{
+    width:1080px;
+    margin:auto;
+    padding:10px;
+    border: 5px solid #dedede;
+    background-color:#fff;
+}
+
+
+#Header 
+{
+    background-image: url("1529189_10151814488815036_31577135_o.jpg");
+    height:100px;  
+    width:1080px; 
+    border: 5px solid #ed147e;
+    text-align:center;
+    overflow:hidden;
+}
+
+#HeaderText 
+{
+    font-family: 'Arabic Typesetting';
+    text-align: center;
+    font-size: 100px;
+    color:#45b0ce;
+}
+
+#LanguageSV
+{
+    position:absolute;
+    top:25px;
+    left:790px;
+    width: 100px;
+    height: 35px;
+}
+
+.Images
+{
+    max-height:30px;
+    max-width:50px;
+}
+
+#LanguageEN
+{
+    position:absolute;
+    top:68px;
+    left:790px;
+    width: 100px;
+    height: 35px;
+    right: 361px;
+}
+
+#loggInUserName 
+{
+    position:absolute;
+    top:20px;
+    left:950px;
+    font-weight: 700;
+}
+
+
+.Links
+{
+	color:Black;
+	text-decoration:none;
+	font-size: 16px;
+	font-family:Maiandra GD;
+}
+
+
+a
+{
+	color:white;
+	text-decoration:none;
+	font-size: 30px;
+	font-family:Maiandra GD;
+}
+
+#UMenu a:hover 
+{
+	color:black;
+}
+
+li 
+{
+    display: inline;
+    padding: 25px;
+}
+
+li ul
+{
+    display: normal;
+    padding: 50px;
+}
+
+ul, li, a 
+{
+    border-bottom: none;
+}
+
+#UMenu ul 
+{
+    display:none;
+}
+
+#UMenu li:hover ul
+{
+    display: block;
+}
+
+
+#Content 
+{
+    width:1080px;
+    height:700px;  
+    padding:3px;
+    border: 3px solid #ed147e;
+}
+
+
+.Content 
+{
+    background-image: url('1529189_10151814488815036_31577135_o.jpg');
+    width:1080px;
+    height:700px;
+    border: solid 2px;
+    overflow:scroll;
+    text-align:center;
+}
+
+#SignInHeader1lbl 
+{
+    font-size:25px;
+    color: #45b0ce;
+    font-family:'Gill Sans MT';
+}
+
+#SignInHeader2lbl 
+{
+    font-size:20px;
+    color: #45b0ce;
+    font-family:'Gill Sans MT';
+}
+
+.siteMapMenu 
+{
+    position:relative;
+    left: 7%;
+}
+
+
+#ProfilePicture 
+{
+    position:relative;
+    top:100px;
+    left: 50px;
+    width: 150px;
+    height:150px;
+    border:solid 2px;
+}
+
+#ProfilMeddelande 
+{
+    border-style: solid;
+    border-color: inherit;
+    border-width: 2px;
+    position:absolute;
+    top:550px;
+    left: 276px;
+    width: 300px;
+    height:315px;
+}
+
+
+#lblNamn 
+{
+    position:absolute;
+    top: 310px;
+    left: 335px;
+}
+
+#lblAlder 
+{
+    position:absolute;
+    top: 350px;
+    left: 335px;
+}
+
+#lblBor 
+{
+    position:absolute;
+    top:390px;
+    left:335px;
+}
+
+#lblKon 
+{
+    position:absolute;
+    top:430px;
+    left:335px;
+}
+
+
+#lblEmail 
+{
+    position:absolute;
+    top:310px;
+    left:650px;
+}
+
+#Buttons
+{
+    position:absolute;
+    top:350px;
+    left:850px;
+}
+
+#lblSysselsattning 
+{
+    position:absolute;
+    top:350px;
+    left:650px;
+}
+
+#lblPermium
+{
+    position:absolute;
+    top: 390px;
+    left:650px;
+}
+
+#lblOmmig 
+{
+    position:absolute;
+    top:470px;
+    left:335px;
+}
+
+#txtOmmig 
+{
+    position:absolute;
+    top: 470px;
+    left:335px;
+    height: 145px;
+    width: 438px;
+    text-align:left;
+}
+
+#PRedigera {
+    position: absolute;
+    top: 500px;
+    left: 63px;
+    height: 24px;
+    width: 150px;
+}
+
+#btnRedigera 
+{
+    position:absolute;
+    top: 560px;
+    left: 62px;
+    height: 24px;
+    width: 150px;
+}
+
+#btnProfilbild 
+{
+    position:relative;
+    top:109px;
+    left:48px;
+}
+
+#Wall 
+{
+    position:absolute;
+    left :627px;
+    top: 450px;
+    height: 476px;
+    width: 376px;
+    bottom: -147px;
+}
+
+
+#UpdatePanel1 
+{
+    height: 150px;
+    width: 150px;
+}
+
+
+#Footer 
+{
+    width:auto;
+    width:1080px;
+    height:40px;
+    margin-top:5px;
+    border: solid 1px;
+}
+
+#Wall {
+    resize:none;
+    Height:476px;
+    Width:370px;
+}
+
+.auto-style1 {
+    width: 100%;
+    height: 440px;
+}
+
+.auto-style2 {
+    font-size: medium;
+    font-weight: normal;
+    text-align: left;
+    height: 40px;
+}
+
+
+.auto-style4 {
+    font-size: medium;
+    font-weight: normal;
+    width: 280px;
+    height: 40px;
+}
+
+.auto-style7 {
+    width: 280px;
+    height: 40px;
+}
+
+.auto-style8 {
+    height: 40px;
+    text-align: left;
+}
+
+.auto-style10 {
+    font-size: medium;
+    text-align: right;
+    width: 140px;
+    height: 40px;
+}
+
+.auto-style11 {
+    font-size: medium;
+    text-align: right;
+    width: 140px;
+    height: 80px;
+}
+
+.auto-style12 {
+    width: 280px;
+    height: 80px;
+}
+
+.auto-style13 {
+    text-align: left;
+    height: 80px;
+}

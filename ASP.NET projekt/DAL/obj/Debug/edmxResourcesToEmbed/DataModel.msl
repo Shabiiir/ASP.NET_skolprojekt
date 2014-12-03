@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+    <EntitySetMapping Name="Användare">
+      <EntityTypeMapping TypeName="DatabaseModel.Användare">
+        <MappingFragment StoreEntitySet="Användare">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Användarnamn" ColumnName="Användarnamn" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FNamn" ColumnName="FNamn" />
+          <ScalarProperty Name="ENamn" ColumnName="ENamn" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Ålder" ColumnName="Ålder" />
+          <ScalarProperty Name="Kön" ColumnName="Kön" />
+          <ScalarProperty Name="Bor" ColumnName="Bor" />
+          <ScalarProperty Name="Sysselsättning" ColumnName="Sysselsättning" />
+          <ScalarProperty Name="OmMig" ColumnName="OmMig" />
+          <ScalarProperty Name="Bild" ColumnName="Bild" />
+          <ScalarProperty Name="Pre" ColumnName="Pre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnvändarIntresse">
+      <EntityTypeMapping TypeName="DatabaseModel.AnvändarIntresse">
+        <MappingFragment StoreEntitySet="AnvändarIntresse">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IntresseID" ColumnName="IntresseID" />
+          <ScalarProperty Name="AnvändarID" ColumnName="AnvändarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Intresses">
+      <EntityTypeMapping TypeName="DatabaseModel.Intresse">
+        <MappingFragment StoreEntitySet="Intresse">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Intresse1" ColumnName="Intresse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meddelandens">
+      <EntityTypeMapping TypeName="DatabaseModel.Meddelanden">
+        <MappingFragment StoreEntitySet="Meddelanden">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Från" ColumnName="Från" />
+          <ScalarProperty Name="Till" ColumnName="Till" />
+          <ScalarProperty Name="Meddelande" ColumnName="Meddelande" />
+          <ScalarProperty Name="Läst" ColumnName="Läst" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Väggmeddelande">
+      <EntityTypeMapping TypeName="DatabaseModel.Väggmeddelande">
+        <MappingFragment StoreEntitySet="Väggmeddelande">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AnvändarID" ColumnName="AnvändarID" />
+          <ScalarProperty Name="Meddelande" ColumnName="Meddelande" />
+          <ScalarProperty Name="MottagarID" ColumnName="MottagarID" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VänFörfrågan">
+      <EntityTypeMapping TypeName="DatabaseModel.VänFörfrågan">
+        <MappingFragment StoreEntitySet="VänFörfrågan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Avskickare" ColumnName="Avskickare" />
+          <ScalarProperty Name="TillFrågad" ColumnName="TillFrågad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vänner">
+      <EntityTypeMapping TypeName="DatabaseModel.Vänner">
+        <MappingFragment StoreEntitySet="Vänner">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID1" ColumnName="ID1" />
+          <ScalarProperty Name="ID2" ColumnName="ID2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

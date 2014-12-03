@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <script src="/Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/Scripts/JavaScript1.js" type="text/javascript"></script>
+
+    <link href="Content/StyleSheetMaster.css" type="text/css" rel="stylesheet" />
+    <title>Find Your love</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="Container">
+        <form id="form1" runat="server">
+            <div id="Header">
+                <asp:HyperLink ID="HeaderText" NavigateUrl="#" runat="server">Find Your love</asp:HyperLink>
+                <div id="LanguageSV">
+                    <asp:LinkButton ID="LinkButtonSV" runat="server" OnClick="LinkButtonSV_Click">
+                        <asp:Image ID="Image1" class="Images" runat="server" ImageUrl="~/images/Svenskaflaggan.jpg" />
+                    </asp:LinkButton>
+                </div>
+                <div id="LanguageEN">
+                    <asp:LinkButton ID="LinkButtonEN" runat="server" OnClick="LinkButtonEN_Click">
+                        <asp:Image ID="Image2" runat="server" class="Images" ImageUrl="~/images/flag_usa_mini_front.gif" />
+                    </asp:LinkButton>
+                </div>
+                <div id="loggInUserName">
+                    <asp:Literal ID="ltrUserName" runat="server" />
+                    <br />
+                    &nbsp;<asp:Button ID="btnSignOut" runat="server" OnClick="btnSignOut_Click" />
+                    <br />
+                    <asp:Button ID="btnMessage" runat="server" Text="Inbox" OnClick="btnMessage_Click" />
+                    <br />
+                    &nbsp; 
+                </div>
+            </div>
+            <div id="Menu">
+                <asp:Menu ID="Menu1" CssClass="siteMapMenu" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" ForeColor="Black">
+                    <StaticHoverStyle BackColor="White" />
+                </asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+            </div>
+            <div id="Content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="Footer" class="auto-style1">
+                <p style="margin-left: 40px">Copyright - 2013 - Johan K - Shabir R - Simon I</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

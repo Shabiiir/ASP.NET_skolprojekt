@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DatabaseModelStoreContainer">
+    <EntitySet Name="Användare" EntityType="DatabaseModel.Store.Användare" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AnvändarIntresse" EntityType="DatabaseModel.Store.AnvändarIntresse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Intresse" EntityType="DatabaseModel.Store.Intresse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Meddelanden" EntityType="DatabaseModel.Store.Meddelanden" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Väggmeddelande" EntityType="DatabaseModel.Store.Väggmeddelande" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VänFörfrågan" EntityType="DatabaseModel.Store.VänFörfrågan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vänner" EntityType="DatabaseModel.Store.Vänner" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__AnvändarI__Använ__24927208" Association="DatabaseModel.Store.FK__AnvändarI__Använ__24927208">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="AnvändarIntresse" EntitySet="AnvändarIntresse" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AnvändarI__Intre__15502E78" Association="DatabaseModel.Store.FK__AnvändarI__Intre__15502E78">
+      <End Role="Intresse" EntitySet="Intresse" />
+      <End Role="AnvändarIntresse" EntitySet="AnvändarIntresse" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Meddelande__Från__49C3F6B7" Association="DatabaseModel.Store.FK__Meddelande__Från__49C3F6B7">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="Meddelanden" EntitySet="Meddelanden" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Meddelande__Till__4AB81AF0" Association="DatabaseModel.Store.FK__Meddelande__Till__4AB81AF0">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="Meddelanden" EntitySet="Meddelanden" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Väggmedde__Motta__37A5467C" Association="DatabaseModel.Store.FK__Väggmedde__Motta__37A5467C">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="Väggmeddelande" EntitySet="Väggmeddelande" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VänFörfrå__Avski__6383C8BA" Association="DatabaseModel.Store.FK__VänFörfrå__Avski__6383C8BA">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="VänFörfrågan" EntitySet="VänFörfrågan" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VänFörfrå__TillF__6477ECF3" Association="DatabaseModel.Store.FK__VänFörfrå__TillF__6477ECF3">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="VänFörfrågan" EntitySet="VänFörfrågan" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vänner__ID1__25869641" Association="DatabaseModel.Store.FK__Vänner__ID1__25869641">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="Vänner" EntitySet="Vänner" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vänner__ID2__267ABA7A" Association="DatabaseModel.Store.FK__Vänner__ID2__267ABA7A">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="Vänner" EntitySet="Vänner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Väggmeddelande_Användare" Association="DatabaseModel.Store.FK_Väggmeddelande_Användare">
+      <End Role="Användare" EntitySet="Användare" />
+      <End Role="Väggmeddelande" EntitySet="Väggmeddelande" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Användare">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Användarnamn" Type="varchar" MaxLength="30" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FNamn" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ENamn" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Ålder" Type="datetime" Nullable="false" />
+    <Property Name="Kön" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Bor" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Sysselsättning" Type="varchar" MaxLength="30" />
+    <Property Name="OmMig" Type="varchar" MaxLength="150" />
+    <Property Name="Bild" Type="varchar" MaxLength="100" />
+    <Property Name="Pre" Type="date" />
+  </EntityType>
+  <EntityType Name="AnvändarIntresse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IntresseID" Type="int" Nullable="false" />
+    <Property Name="AnvändarID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Intresse">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Intresse" Type="varchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Meddelanden">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Från" Type="int" Nullable="false" />
+    <Property Name="Till" Type="int" Nullable="false" />
+    <Property Name="Meddelande" Type="varchar(max)" />
+    <Property Name="Läst" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Väggmeddelande">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AnvändarID" Type="int" Nullable="false" />
+    <Property Name="Meddelande" Type="varchar(max)" Nullable="false" />
+    <Property Name="MottagarID" Type="int" Nullable="false" />
+    <Property Name="Tid" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VänFörfrågan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Avskickare" Type="int" Nullable="false" />
+    <Property Name="TillFrågad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vänner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID1" Type="int" Nullable="false" />
+    <Property Name="ID2" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__AnvändarI__Använ__24927208">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="AnvändarIntresse" Type="DatabaseModel.Store.AnvändarIntresse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AnvändarIntresse">
+        <PropertyRef Name="AnvändarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AnvändarI__Intre__15502E78">
+    <End Role="Intresse" Type="DatabaseModel.Store.Intresse" Multiplicity="1" />
+    <End Role="AnvändarIntresse" Type="DatabaseModel.Store.AnvändarIntresse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Intresse">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AnvändarIntresse">
+        <PropertyRef Name="IntresseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Meddelande__Från__49C3F6B7">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="Meddelanden" Type="DatabaseModel.Store.Meddelanden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Meddelanden">
+        <PropertyRef Name="Från" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Meddelande__Till__4AB81AF0">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="Meddelanden" Type="DatabaseModel.Store.Meddelanden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Meddelanden">
+        <PropertyRef Name="Till" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Väggmedde__Motta__37A5467C">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="Väggmeddelande" Type="DatabaseModel.Store.Väggmeddelande" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Väggmeddelande">
+        <PropertyRef Name="MottagarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VänFörfrå__Avski__6383C8BA">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="VänFörfrågan" Type="DatabaseModel.Store.VänFörfrågan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VänFörfrågan">
+        <PropertyRef Name="Avskickare" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VänFörfrå__TillF__6477ECF3">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="VänFörfrågan" Type="DatabaseModel.Store.VänFörfrågan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VänFörfrågan">
+        <PropertyRef Name="TillFrågad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vänner__ID1__25869641">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="Vänner" Type="DatabaseModel.Store.Vänner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vänner">
+        <PropertyRef Name="ID1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vänner__ID2__267ABA7A">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="Vänner" Type="DatabaseModel.Store.Vänner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Vänner">
+        <PropertyRef Name="ID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Väggmeddelande_Användare">
+    <End Role="Användare" Type="DatabaseModel.Store.Användare" Multiplicity="1" />
+    <End Role="Väggmeddelande" Type="DatabaseModel.Store.Väggmeddelande" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Användare">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Väggmeddelande">
+        <PropertyRef Name="AnvändarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
